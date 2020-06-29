@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::put('/assement', 'AssementController@update');
+Route::delete('/assement', 'AssementController@destroy');
+Route::get('/assement', 'AssementController@show');
